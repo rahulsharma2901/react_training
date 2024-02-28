@@ -1,32 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 
-class App extends React.Component {
-  render() {
-    return <h1>{this.props.data}</h1>
+class App extends Component {
+  state = {
+    num: 1,
+    name: "Rahul Sharma",
+    age: 23
   }
-}
 
-class Props extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = { change: true }
-  };
+  changeName() {
+    this.setState({
+      num: this.state.num + 1,
+      name: "Megha Sharma",
+      age: 30
+    })
+  }
+
   render() {
     return (
       <div>
-        <button onClick={() => {
-          this.setState({ change: !this.state.change })
-        }}
-        >
-          CLICK HERE!
-        </button>
-        { this.state.change ? (
-          <App data = "Hello, my friend!" />
-        ) : (
-          <App data = "Goodbye, my friend!" />
-        )}       
+        <h1>{this.state.num}</h1>
+        <h1>{this.state.name}</h1>
+        <h1>{this.state.age}</h1>
+        <button type="button" onClick={() => this.changeName()}>CLICK HERE</button>
       </div>
     )
   }
 }
-export default Props;
+
+export default App;
