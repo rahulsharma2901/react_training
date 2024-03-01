@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ClickFunction from './ClickFunction';
 import reportWebVitals from './reportWebVitals';
+import BindingEvent from './BindingEvent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ClickFunction name = "Sneha Sharma"/>
+    <BindingEvent/>
   </React.StrictMode>
 );
 
