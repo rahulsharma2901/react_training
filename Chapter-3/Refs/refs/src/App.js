@@ -1,25 +1,14 @@
-import React, { Component } from 'react'
+// import logo from './logo.svg';
+import './App.css';
+import CallbackRef from './CallbackRef';
+// import RefComponent from './RefComponent';
 
-class App extends Component {
-  constructor() {
-    super()
-  
-    this.state = {
-       sayings: ""
-    }
-  }
-  update() {
-    this.setState({ sayings: this.a.value})
-  }
-  
-  render() {
-    return (
-      <div>
-        Sharad says <input type='text' ref="anything" onChange={this.update.bind(this)} />
-        <br />
-        <em>{this.state.sayings}</em>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div>
+      <CallbackRef />
+    </div>
+  )
 }
+
 export default App;
