@@ -12,6 +12,7 @@ import Accessories from './pages/Accessories';
 import Shoes from './pages/Shoes';
 import Jeans from './pages/Jeans';
 import Users from './pages/Users';
+import UserDetails from './pages/UserDetails';
 
 function App() {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/users' element={<Users />} />
+        <Route path='/users/:id' element={<UserDetails />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
       <button onClick={() => navigateToWhere()}>Click Me</button> <br />
