@@ -12,10 +12,11 @@ function NavBar() {
     }
 
   return (
-    <nav>
-        <NavLink style={NavLinkCSS} to='/'>Home</NavLink>
-        <NavLink style={NavLinkCSS} to='/about'>About</NavLink>
-        <NavLink style={NavLinkCSS} to='/contact'>Contact</NavLink>
+    <nav className='main-nav'>
+        <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
+        <NavLink style={NavLinkCSS} to='/products'> Products </NavLink>
+        <NavLink style={NavLinkCSS} to='/about'> About </NavLink>
+        <NavLink style={NavLinkCSS} to='/contact'> Contact </NavLink>
     </nav>
   )
 }
