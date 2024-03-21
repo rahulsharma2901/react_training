@@ -1,0 +1,96 @@
+.App {
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  color: white;
+  padding: 0% 1%;
+}
+.back-button{
+  display: flex;
+  background-color: #282c34;
+  border-color: #282c34;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 155%;
+  width: 3%;
+  cursor: pointer;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+}
+.back-button:hover{
+  background-color: #7c7c7c;
+  transition: 0.3s ease-in-out;
+}
+.user-details {
+  display: flex;
+  background-color: #282c34;
+  border-color: #282c34;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 100%;
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+}
+.user-details:hover{
+  background-color: #7c7c7c;
+  transition: 0.3s ease-in-out;
+}
+.navbar-style {
+  font-size: larger;
+  padding-left: 2%;
+}
+
+.App-body{
+  background-color: blanchedalmond;
+  display: flex;
+  min-height: 84vh;
+  justify-content: center;
+}
+
+.App-footer {
+  background-color: aqua; 
+  display: flex; 
+  flex-direction: row;
+  padding: 0% 2%;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 6vh;
+}
+.App-footer a {
+  color: blue;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  min-height: 5vh;
+  line-height: 9vh;
+}
+
+.App-footer a::before {
+  position: absolute;
+  opacity: 0;
+  content: "";
+  height: 3px;
+  border-radius: 3px;
+  background: blue;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all .3s ease;
+}
+.App-footer a:hover::before,
+.App-footer a.active::before {
+  opacity: 1;
+}
