@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 export const STATUSES = Object.freeze({
     IDLE: 'idle',
@@ -22,14 +23,15 @@ const prodSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchProducts.pending, (state, action) => {
+            .addCase(fetchProducts.pending, (state) => {
                 state.status = STATUSES.LOADING;
             })
             .addCase(fetchProducts.fulfilled, (state, action) => {
                 state.data = action.payload;
                 state.status = STATUSES.IDLE;
             })
-            .addCase(fetchProducts.rejected, (state, action) => {
+            .addCase(fetchProducts.rejected, (state) => {
+                // eslint-disable-next-line
                 state.status = STATUSES. ERROR;
             })
     }
@@ -41,9 +43,13 @@ export default prodSlice.reducer;
 //Thunks
 
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-    const response = await fetch('https://fakestoreapi.com/products')
-    const data = await response.json();
-    return data;
+    try {
+        const response = await axios.get('https://fakestoreapi.com/products')
+        return response.data;
+    }
+    catch (error) {
+        throw error
+    }
 })
 
 
