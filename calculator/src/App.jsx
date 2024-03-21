@@ -4,9 +4,7 @@ import Display from './Components/Display';
 import Keypad from './Components/Keypad';
 import { useEffect } from 'react';
 
-const usedKeys = [
-  67, 8, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 13, 190, 187, 189, 191, 56, 53
-]
+const usedKeys = [ 67, 8, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 13, 190, 187, 189, 191, 56, 53 ]
 const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 const operators = ["+", "-", "%", "*", "/"]
 
